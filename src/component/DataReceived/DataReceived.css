@@ -1,0 +1,12 @@
+#data {
+  
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 2px solid rgb(0, 0, 0);
+  margin-left:250px;
+  width: 50%;
+}
+
+#data td, #data th {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 8px;
+}

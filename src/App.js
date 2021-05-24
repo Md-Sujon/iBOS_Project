@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
+import DataInput from './component/DataInput/DataInput';
+import DataReceived from './component/DataReceived/DataReceived';
+import DataTable from './component/DataTable/DataTable';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App mt-5">
+      <DataInput></DataInput>
+      <DataReceived></DataReceived>
+      <DataTable></DataTable>
     </div>
   );
 }
