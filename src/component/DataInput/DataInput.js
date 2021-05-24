@@ -2,7 +2,9 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const DataInput = () => {
-    const { register, handleSubmit} = useForm();
+    const { register, handleSubmit, reset} = useForm();
+
+
     
      const onSubmit = data => {
         console.log(data)
@@ -17,9 +19,10 @@ const DataInput = () => {
         })
         .then(res=> res.json())
         .then(success=>{
-            if(success){
-                alert("Data Send SuccessFully")
-            }
+            if (success) {
+                reset({ something: '' });
+                alert('s')
+              }
         })
 
   
@@ -41,7 +44,7 @@ const DataInput = () => {
     
     <input type="email" className="form-control m-1" name="email"  {...register('email', { required: true })} placeholder="sumon@gmail.com"/>
     
-    <button type="submit" className="btn btn-primary m-1">Add</button>
+    <button type="submit"  className="btn btn-primary m-1">Add</button>
     </div>
     
 </form>
