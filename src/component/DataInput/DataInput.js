@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 const DataInput = () => {
+const [database, setDatabase]=useState();
+
+ 
+
+
     const { register, handleSubmit, reset} = useForm();
 
 
     
      const onSubmit = data => {
-        console.log(data)
-
         fetch (`http://localhost:5000/addData`, {
             method:'POST',
             headers: {
@@ -25,8 +28,15 @@ const DataInput = () => {
               }
         })
 
-  
   };
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/redData`)
+    .then(res=> res.json())
+    .then(result => {setDatabase(result)});
+},[])
+
+
 
     return (
         <div className="App row justify-content-center ">

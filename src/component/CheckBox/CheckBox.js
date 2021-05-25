@@ -143,6 +143,7 @@ const CheckBox = () => {
                         <td>{item.moduleName}</td>
                         <td>{item.activityName}</td>
                         <td>{<input type="checkbox"
+                   
                             className="form-check-input"
                               />}</td>
 
